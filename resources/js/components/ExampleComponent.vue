@@ -30,10 +30,11 @@
 </template>
 
 <script>
-    import { BCard } from 'bootstrap-vue'
+    import { BCard } from 'bootstrap-vue';
     export default {
+        components: {BCard},
         mounted() {
-            console.log('Component mounted.')
+            console.log('Component mounted.');
         }
-    }
+    };
 </script>
