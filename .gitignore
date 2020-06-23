@@ -3,6 +3,7 @@
 /public/hot
 /public/js/app.js
 /public/js/vue-app.js
+/public/mix-manifest.json
 /public/storage
 /resources/assets/js/ziggy.js
 /storage/*.key

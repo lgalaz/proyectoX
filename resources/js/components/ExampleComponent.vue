@@ -34,7 +34,7 @@
     export default {
         components: {BCard},
         mounted() {
-            console.log('Component mounted.');
+            console.log(this.route('logout').url());
         }
     };
 </script>

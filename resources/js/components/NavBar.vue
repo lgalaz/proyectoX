@@ -45,6 +45,7 @@
         components: { BNavbar },
         mounted() {
             console.log('Component mounted.');
+            console.log(this.$store.state.user);
         }
     };
 </script>
