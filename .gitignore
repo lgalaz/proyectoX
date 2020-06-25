@@ -5,7 +5,7 @@
 /public/js/vue-app.js
 /public/mix-manifest.json
 /public/storage
-/resources/assets/js/ziggy.js
+/resources/js/ziggy.js
 /storage/*.key
 /vendor
 .env
