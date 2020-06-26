@@ -8,11 +8,12 @@
             <b-collapse id="nav-collapse" is-nav>
 
             <!-- Right aligned nav items -->
-            <b-navbar-nav class="ml-auto">
+            <b-navbar-nav class="ml-auto" v-if="this.$store.getters.isAuthenticated">
                 <b-nav-item-dropdown right>
                 <!-- Using 'button-content' slot -->
                 <template v-slot:button-content>
-                    <em>User</em>
+                    <b-avatar variant="dark" text="LG" class="mr-1"></b-avatar>
+                    <em>{{ $store.state.user.name }}</em>
                 </template>
                 <b-dropdown-item href="#">Profile</b-dropdown-item>
                 <b-dropdown-item-button @click="logout">Sign out</b-dropdown-item-button>
@@ -24,10 +25,11 @@
 </template>
 
 <script>
+    import { BAvatar } from 'bootstrap-vue'
     import { BNavbar } from 'bootstrap-vue';
 
     export default {
-        components: { BNavbar },
+        components: { BAvatar, BNavbar },
         methods: {
             async logout() {
                 try {
