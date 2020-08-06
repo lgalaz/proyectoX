@@ -33,8 +33,5 @@
     import { BCard } from 'bootstrap-vue';
     export default {
         components: {BCard},
-        mounted() {
-            console.log('ex comp', this.route('logout').url());
-        }
     };
 </script>

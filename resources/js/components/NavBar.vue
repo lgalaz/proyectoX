@@ -7,25 +7,24 @@
 
             <b-collapse id="nav-collapse" is-nav>
 
-            <!-- Right aligned nav items -->
-            <b-navbar-nav class="ml-auto" v-if="this.$store.getters.isAuthenticated">
-                <b-nav-item-dropdown right>
-                <!-- Using 'button-content' slot -->
-                <template v-slot:button-content>
-                    <b-avatar variant="dark" text="LG" class="mr-1"></b-avatar>
-                    <em>{{ $store.state.user.name }}</em>
-                </template>
-                <b-dropdown-item href="#">Profile</b-dropdown-item>
-                <b-dropdown-item-button @click="logout">Sign out</b-dropdown-item-button>
-                </b-nav-item-dropdown>
-            </b-navbar-nav>
+                <!-- Right aligned nav items -->
+                <b-navbar-nav class="ml-auto" v-if="this.$store.getters.isAuthenticated">
+                    <b-nav-item-dropdown right no-caret lazy>
+                        <!-- Using 'button-content' slot -->
+                        <template v-slot:button-content class="mr-1">
+                            <b-avatar variant="dark" text="LG" class="mr-1"></b-avatar>
+                        </template>
+                        <b-dropdown-item href="#">Profile</b-dropdown-item>
+                        <b-dropdown-item-button @click="logout">Sign out</b-dropdown-item-button>
+                    </b-nav-item-dropdown>
+                </b-navbar-nav>
             </b-collapse>
         </b-navbar>
     </div>
 </template>
 
 <script>
-    import { BAvatar } from 'bootstrap-vue'
+    import { BAvatar } from 'bootstrap-vue';
     import { BNavbar } from 'bootstrap-vue';
 
     export default {
